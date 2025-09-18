@@ -1,0 +1,48 @@
+/* Dashboard-only gradient utilities — scoped to ShadCN dashboard */
+
+/* Page backgrounds */
+.bg-gradient-security {
+  background: radial-gradient(1200px 600px at -10% -10%, rgba(120, 59, 176, 0.15) 0%, rgba(120, 59, 176, 0) 60%),
+              radial-gradient(900px 500px at 110% -20%, rgba(68, 8, 125, 0.18) 0%, rgba(68, 8, 125, 0) 65%),
+              linear-gradient(180deg, #0f0f14 0%, #0b0b10 100%);
+}
+
+.bg-gradient-dashboard {
+  background: radial-gradient(800px 400px at 10% -10%, rgba(68, 8, 125, 0.25) 0%, rgba(68, 8, 125, 0) 70%),
+              radial-gradient(700px 400px at 90% 0%, rgba(120, 59, 176, 0.18) 0%, rgba(120, 59, 176, 0) 70%),
+              linear-gradient(180deg, #0d0d13 0%, #09090d 100%);
+}
+
+/* Cards and surfaces */
+.bg-gradient-card {
+  background: linear-gradient(135deg, rgba(21, 21, 28, 0.9) 0%, rgba(18, 18, 26, 0.9) 100%);
+  border: 1px solid rgba(120, 59, 176, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.border-gradient { border: 1px solid rgba(120, 59, 176, 0.35); }
+
+.shadow-elegant { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.03); }
+
+/* Buttons and chips */
+.bg-gradient-button {
+  background: linear-gradient(135deg, #783bb0 0%, #44087d 100%);
+}
+.bg-gradient-button:hover { filter: brightness(1.05); }
+
+/* Sidebar pieces */
+.bg-gradient-sidebar {
+  background: linear-gradient(180deg, rgba(15, 15, 23, 0.95) 0%, rgba(12, 12, 20, 0.95) 100%);
+}
+.bg-gradient-header {
+  background: linear-gradient(180deg, rgba(20, 20, 30, 0.9) 0%, rgba(14, 14, 22, 0.9) 100%);
+}
+
+/* Typography accents */
+.text-gradient {
+  background: linear-gradient(90deg, #caa7ff 0%, #9b72cf 50%, #caa7ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bg-gradient-text { background: linear-gradient(90deg, #caa7ff, #9b72cf); }
