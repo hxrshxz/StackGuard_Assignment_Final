@@ -15,7 +15,7 @@ const StatCard = ({
   bgColor,
   delay,
 }: StatCardProps) => {
-  const animatedValue = useCountUp(value);
+  const animatedValue = useCountUp(typeof value === 'number' ? value : parseFloat(value) || 0);
 
   return (
     <div
