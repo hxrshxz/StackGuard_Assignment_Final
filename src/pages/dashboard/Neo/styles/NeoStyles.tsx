@@ -52,6 +52,12 @@ export const NeoStyles: React.FC = () => (
       box-shadow: 2px 2px 0px black; 
     }
     
+    .neo-card-sm { 
+      border: 2px solid black; 
+      border-radius: 8px; 
+      box-shadow: 2px 2px 0px black; 
+    }
+    
     /* Custom responsive adjustments for specific breakpoints */
     @media (min-width: 1200px) {
       .neo-dashboard-container {

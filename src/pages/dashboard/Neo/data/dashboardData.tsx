@@ -66,49 +66,49 @@ const GithubIcon: React.FC<{ className?: string }> = (props) => (
 export const statsData: Omit<StatCardProps, "delay">[] = [
   {
     icon: <KeyIcon />,
-    title: "Exposed Secrets",
-    value: 72,
-    change: "+3",
+    title: "Unique Visitors",
+    value: "10.5k",
+    change: "-10%",
     changeType: "bad",
     bgColor: "bg-yellow-200",
   },
   {
     icon: <BotIcon />,
-    title: "Zombie NHIs",
-    value: 1248,
-    change: "-12",
-    changeType: "good",
+    title: "Page Views",
+    value: "18.3k",
+    change: "-10%",
+    changeType: "bad",
     bgColor: "bg-blue-200",
   },
   {
     icon: <SirenIcon />,
-    title: "High-Risk Alerts",
-    value: 19,
-    change: "+2",
+    title: "Sessions",
+    value: "12.4k",
+    change: "-10%",
     changeType: "bad",
     bgColor: "bg-red-300",
   },
   {
     icon: <ShieldCheckIcon />,
-    title: "Compliance",
-    value: 98,
-    change: "+2.5%",
-    changeType: "good",
+    title: "Session Duration",
+    value: "4m",
+    change: "-10%",
+    changeType: "bad",
     bgColor: "bg-green-200",
   },
   {
     icon: <TrendingUpIcon />,
-    title: "Remediation Rate",
-    value: 89,
+    title: "Bounce Rate",
+    value: "42%",
     change: "+5%",
-    changeType: "good",
+    changeType: "bad",
     bgColor: "bg-teal-200",
   },
   {
     icon: <ZapIcon />,
-    title: "Attack Paths",
-    value: 315,
-    change: "+15",
+    title: "Active Users",
+    value: "2.8k",
+    change: "-8%",
     changeType: "bad",
     bgColor: "bg-purple-200",
   },
@@ -116,64 +116,64 @@ export const statsData: Omit<StatCardProps, "delay">[] = [
 
 // Data for the donut chart
 export const nhiDistributionData: NHIItem[] = [
-  { name: "API Keys", value: 50, color: "#FBBF24" },
-  { name: "Service Accounts", value: 40, color: "#60A5FA" },
-  { name: "CI/CD Tokens", value: 30, color: "#EC4899" },
-  { name: "Others", value: 20, color: "#A78BFA" },
+  { name: "Web Analytics", value: 40, color: "#10B981" },
+  { name: "Session Replay", value: 30, color: "#F59E0B" },
+  { name: "Product Analytics", value: 20, color: "#3B82F6" },
+  { name: "Feature Flags", value: 10, color: "#8B5CF6" },
 ];
 
 // Data for the attack vectors list
 export const topAttackVectorsData: AttackVector[] = [
-  { name: "Credential Stuffing", risk: "High" },
-  { name: "Leaked API Keys", risk: "High" },
-  { name: "Phishing", risk: "Medium" },
-  { name: "Insider Threat", risk: "Medium" },
+  { name: "Dashboard Views", risk: "High" },
+  { name: "User Sign-ups", risk: "High" },
+  { name: "Feature Usage", risk: "Medium" },
+  { name: "Page Interactions", risk: "Medium" },
 ];
 
 // Data for the live threat feed
 export const liveThreatsData: Threat[] = [
   {
     severity: "High",
-    desc: "Hardcoded AWS Key found",
+    desc: "User completed checkout flow",
     source: "AWS",
-    action: "Investigate",
+    action: "View Details",
   },
   {
     severity: "High",
-    desc: "Overprivileged GCP Account",
+    desc: "New feature flag activated",
     source: "GCP",
+    action: "Monitor",
+  },
+  {
+    severity: "Medium",
+    desc: "Session replay recorded",
+    source: "GitHub",
+    action: "Watch",
+  },
+  {
+    severity: "Low",
+    desc: "Dashboard viewed by user",
+    source: "AWS",
+    action: "Track",
+  },
+  {
+    severity: "Medium",
+    desc: "A/B test result available",
+    source: "AWS",
+    action: "Analyze",
+  },
+  {
+    severity: "High",
+    desc: "Conversion goal achieved",
+    source: "AWS",
     action: "Review",
   },
   {
     severity: "Medium",
-    desc: "CI/CD token nearing expiration",
-    source: "GitHub",
-    action: "Rotate",
-  },
-  {
-    severity: "Low",
-    desc: "Unused service account",
-    source: "AWS",
-    action: "Disable",
-  },
-  {
-    severity: "Medium",
-    desc: "Public S3 Bucket detected",
-    source: "AWS",
-    action: "Remediate",
-  },
-  {
-    severity: "High",
-    desc: "Admin access key compromised",
-    source: "AWS",
-    action: "Investigate",
-  },
-  {
-    severity: "Medium",
-    desc: "Kubernetes secret exposed",
+    desc: "User feedback submitted",
     source: "GCP",
-    action: "Rotate",
-  }
+    action: "Read",
+  },
 ];
 
 // A map for source icons to avoid logic in JSX

@@ -1,13 +1,10 @@
 import React from "react";
 import { ChartProps, NHIItem } from "../types";
 
+import { nhiDistributionData } from "../data/dashboardData";
+
 export const NHIDistributionChart: React.FC<ChartProps> = ({ delay }) => {
-  const data: NHIItem[] = [
-    { name: "API Keys", value: 40, color: "#FBBF24" },
-    { name: "Service Accounts", value: 30, color: "#60A5FA" },
-    { name: "CI/CD Tokens", value: 20, color: "#EC4899" },
-    { name: "Others", value: 10, color: "#A78BFA" },
-  ];
+  const data: NHIItem[] = nhiDistributionData;
 
   const radius = 45;
   const circumference = 2 * Math.PI * radius;
@@ -19,7 +16,9 @@ export const NHIDistributionChart: React.FC<ChartProps> = ({ delay }) => {
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="bg-blue-300 border-2 border-black rounded-lg p-2 mb-3 shadow-[2px_2px_0px_black]">
-        <h3 className="font-extrabold text-md text-black">NHI Distribution</h3>
+        <h3 className="font-extrabold text-md text-black">
+          Analytics Apps Usage
+        </h3>
       </div>
       <div className="flex-grow flex items-center justify-center gap-8">
         <div className="relative w-32 h-32">

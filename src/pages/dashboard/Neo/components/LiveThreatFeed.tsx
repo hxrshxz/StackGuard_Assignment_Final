@@ -2,16 +2,16 @@ import React, { useState, useMemo } from "react";
 import { Threat, ThreatSeverity } from "../types";
 import { sourceIcons } from "../data/dashboardData"; // Assuming icons map is in data file
 
-// Style mapping for severity levels
-const severityBadgeStyles: Record<ThreatSeverity, string> = {
+// Style mapping for priority levels
+const priorityBadgeStyles: Record<ThreatSeverity, string> = {
   High: "bg-red-200 text-red-900",
   Medium: "bg-yellow-200 text-yellow-900",
   Low: "bg-blue-200 text-blue-900",
 };
 
-const SeverityBadge = ({ severity }: { severity: ThreatSeverity }) => (
+const PriorityBadge = ({ severity }: { severity: ThreatSeverity }) => (
   <span
-    className={`px-1.5 py-0.5 text-xs font-bold rounded-md border-2 border-black ${severityBadgeStyles[severity]}`}
+    className={`px-1.5 py-0.5 text-xs font-bold rounded-md border-2 border-black ${priorityBadgeStyles[severity]}`}
   >
     {severity}
   </span>
@@ -45,7 +45,7 @@ const LiveThreatFeed = ({ delay, threats }: Props) => {
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex justify-between items-center mb-3">
-        <h3 className="font-bold text-md">Live Threat Feed</h3>
+        <h3 className="font-bold text-md">Live Activity Feed</h3>
         <div className="flex space-x-1 p-1 bg-gray-100 border-2 border-black rounded-md">
           {filterTabs.map((tab) => (
             <button
@@ -75,7 +75,7 @@ const LiveThreatFeed = ({ delay, threats }: Props) => {
               </div>
               <div>
                 <p className="font-semibold truncate text-sm">{threat.desc}</p>
-                <SeverityBadge severity={threat.severity} />
+                <PriorityBadge severity={threat.severity} />
               </div>
             </div>
             <button className="neo-btn bg-white text-xs px-2.5 py-1 shrink-0">

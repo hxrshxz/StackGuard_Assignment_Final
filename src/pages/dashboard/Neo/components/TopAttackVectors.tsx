@@ -1,15 +1,12 @@
 import React from "react";
 import { ChartProps, AttackVector, RiskBadgeProps } from "../types";
 
-export const TopAttackVectors: React.FC<ChartProps> = ({ delay }) => {
-  const vectors: AttackVector[] = [
-    { name: "Credential Stuffing", risk: "High" },
-    { name: "Leaked API Keys", risk: "High" },
-    { name: "Phishing", risk: "Medium" },
-    { name: "Insider Threat", risk: "Medium" },
-  ];
+import { topAttackVectorsData } from "../data/dashboardData";
 
-  const RiskBadge: React.FC<RiskBadgeProps> = ({ risk }) => {
+export const TopAttackVectors: React.FC<ChartProps> = ({ delay }) => {
+  const vectors: AttackVector[] = topAttackVectorsData;
+
+  const PriorityBadge: React.FC<RiskBadgeProps> = ({ risk }) => {
     const colors = {
       High: "bg-red-300 text-red-900",
       Medium: "bg-yellow-300 text-yellow-900",
@@ -32,7 +29,7 @@ export const TopAttackVectors: React.FC<ChartProps> = ({ delay }) => {
     >
       <div className="bg-purple-300 border-2 border-black rounded-lg p-2 mb-3 shadow-[2px_2px_0px_black]">
         <h3 className="font-extrabold text-md text-black">
-          Top Attack Vectors
+          Top User Activities
         </h3>
       </div>
       <div className="flex-grow space-y-3">
@@ -45,7 +42,7 @@ export const TopAttackVectors: React.FC<ChartProps> = ({ delay }) => {
             }}
           >
             <p className="font-bold text-black">{v.name}</p>
-            <RiskBadge risk={v.risk} />
+            <PriorityBadge risk={v.risk} />
           </div>
         ))}
       </div>

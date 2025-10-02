@@ -9,7 +9,7 @@ export interface IconProps {
 export interface StatCardProps {
   icon: React.ReactNode;
   title: string;
-  value: number;
+  value: number | string;
   change: string;
   changeType: "good" | "bad";
   bgColor: string;

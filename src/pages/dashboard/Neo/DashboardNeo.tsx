@@ -20,8 +20,8 @@ import { TopAttackVectors } from "./components/TopAttackVectors";
 import LiveThreatFeed from "./components/LiveThreatFeed";
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState("Dashboard");
-  const navTabs = ["Dashboard", "Discovery", "Remediation"];
+  const [activeTab, setActiveTab] = useState("Analytics");
+  const navTabs = ["Analytics", "Insights", "Reports"];
 
   return (
     <>
@@ -40,11 +40,9 @@ export default function Dashboard() {
               <div className="neo-card bg-gradient-to-r from-green-100 to-blue-100 p-3 flex-shrink-0">
                 <div className="flex items-center space-x-1">
                   <div className="neo-btn bg-green-400 px-3 py-2 flex items-center justify-center min-w-[44px] h-[44px]">
-                    <span className="text-xl font-extrabold text-black">S</span>
+                    <span className="text-xl font-extrabold text-black">P</span>
                   </div>
-                  <h1 className="text-xl font-extrabold text-black">
-                    tackGuard
-                  </h1>
+                  <h1 className="text-xl font-extrabold text-black">ostHog</h1>
                 </div>
               </div>
 
